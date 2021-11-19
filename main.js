@@ -20,6 +20,10 @@ var vueInstance = new Vue ({
         handerClick(e, number){
             console.log('click', e);
             this.counter += number;
+        },
+
+        handerSubmitForm(e){
+            console.log(e);
         }
     }
 });

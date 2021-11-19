@@ -200,7 +200,8 @@
               </tbody>
             </table>
           </div>
-          <button type="button" class="btn btn-primary btn-md mr-1 mb-2">
+          <p>Counter: {{counter}}</p>
+          <button v-on:click="handerClick($event, 5)" type="button" class="btn btn-primary btn-md mr-1 mb-2">
             Buy now
           </button>
           <button type="button" class="btn btn-light btn-md mr-1 mb-2">

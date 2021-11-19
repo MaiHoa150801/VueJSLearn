@@ -5,7 +5,8 @@ var vueInstance = new Vue ({
         url: 'https://www.youtube.com/watch?v=AHPkqa5ZaN0&list=PLv6GftO355AtDjStqeyXvhA1oRLuhvJWf&index=7&ab_channel=ZendVN-H%E1%BB%8DcL%E1%BA%ADpTr%C3%ACnhOnline',
         target:'_blank',
         price: 10000,
-        counter:0
+        counter:0,
+        message: 'Le Thi Mai Hoa'
     },
     methods:{
         say:function(text){
@@ -25,5 +26,10 @@ var vueInstance = new Vue ({
         handerSubmitForm(e){
             console.log(e);
         }
+    },
+    computed: {
+        reversedMessage: function () {
+        return this.message.split('').reverse().join('')
+      }
     }
 });

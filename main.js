@@ -33,3 +33,16 @@ var vueInstance = new Vue ({
       }
     }
 });
+
+var vueInstance = new Vue ({
+    el:'#model',
+    data:{
+        username: '',
+    },
+    methods:{
+        
+    },
+    computed: {
+        
+    }
+});

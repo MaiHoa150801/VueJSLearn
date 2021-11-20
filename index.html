@@ -10,6 +10,15 @@
 </head>
   <body>
     <header>Header</header>
+    <div id="model">
+      {{username}}
+      <br>
+      <input v-model="username" type="text" >
+      <button v-on:click="changeActive"> Change Active</button>
+      <button v-on:click="changeError"> Change Error</button>
+      <div class="demo" v-bind:class="objClass">
+      </div>
+    </div>
     <!--Section: Block Content-->
     <section class="mb-5">
       <div class="row">
@@ -218,11 +227,7 @@
         </div>
       </div>
     </section>
-    <div id="model">
-      {{username}}
-      <br>
-      <input v-model="username" type="text" >
-    </div>
+    
     <!--Section: Block Content-->
     <footer>Footer</footer>
   </body>

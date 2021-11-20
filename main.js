@@ -38,11 +38,23 @@ var vueInstance = new Vue ({
     el:'#model',
     data:{
         username: '',
+        isActive: false,
+        isError: true
     },
     methods:{
-        
+        changeActive(){
+            this.isActive = !this.isActive;
+        },
+        changeError(){
+            this.isError = !this.isError;
+        }
     },
     computed: {
-        
+        objClass:function(){
+            return {
+                active : this.isActive,
+                error: this.isError
+            }
+        }
     }
 });

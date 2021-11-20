@@ -34,12 +34,13 @@ var vueInstance = new Vue ({
     }
 });
 
-var vueInstance = new Vue ({
+var vue = new Vue ({
     el:'#model',
     data:{
         username: '',
         isActive: false,
-        isError: true
+        isError: true,
+        bg: 'https://mondaycareer.com/wp-content/uploads/2020/11/background-%C4%91%E1%BA%B9p-3-1.jpg'
     },
     methods:{
         changeActive(){
@@ -54,6 +55,13 @@ var vueInstance = new Vue ({
             return {
                 active : this.isActive,
                 error: this.isError
+            }
+        },
+        objStyle:function(){
+            return {
+                backgroundImage: 'url(' + this.bg + ')',
+                margin: '10px',
+                paddingLeft: '200px',
             }
         }
     }

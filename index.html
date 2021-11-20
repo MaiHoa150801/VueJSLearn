@@ -10,13 +10,15 @@
 </head>
   <body>
     <header>Header</header>
-    <div id="model">
+    <div id="model" >
       {{username}}
-      <br>
-      <input v-model="username" type="text" >
-      <button v-on:click="changeActive"> Change Active</button>
-      <button v-on:click="changeError"> Change Error</button>
-      <div class="demo" v-bind:class="objClass">
+      <div v-bind:style="objStyle">
+        <br>
+        <input v-model="username" type="text" >
+        <button v-on:click="changeActive"> Change Active</button>
+        <button v-on:click="changeError"> Change Error</button>
+        <div class="demo" v-bind:class="objClass">
+        </div>
       </div>
     </div>
     <!--Section: Block Content-->

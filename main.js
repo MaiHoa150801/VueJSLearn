@@ -6,7 +6,8 @@ var vueInstance = new Vue ({
         target:'_blank',
         price: 10000,
         counter:0,
-        message: 'Le Thi Mai Hoa'
+        message: 'Le Thi Mai Hoa',
+        tabSelected: 'login'
     },
     methods:{
         say:function(text){
@@ -25,12 +26,17 @@ var vueInstance = new Vue ({
 
         handerSubmitForm(e){
             console.log(e);
+        },
+
+        changeTabs(tab) {
+            this.tabSelected = tab;
         }
     },
     computed: {
         reversedMessage: function () {
         return this.message.split('').reverse().join('')
-      }
+      },
+      
     }
 });
 

@@ -72,3 +72,31 @@ var vue = new Vue ({
         }
     }
 });
+
+var loop = new Vue ({
+    el: '#loop',
+    data: {
+        arrayUser: [
+            {email: 'email1@gmail.com', isActive: true},
+            {email: 'email2@gmail.com', isActive: false},
+            {email: 'email3@gmail.com', isActive: false},
+            {email: 'email4@gmail.com', isActive: true},
+            {email: 'email5@gmail.com', isActive: false},
+            {email: 'email6@gmail.com', isActive: true},
+            {email: 'email7@gmail.com', isActive: false},
+            {email: 'email8@gmail.com', isActive: true},
+            {email: 'email9@gmail.com', isActive: false},
+            {email: 'email10@gmail.com', isActive: true},
+        ]
+    },
+    methods: {
+
+    },
+    computed: {
+        userActive(){
+            return this.arrayUser.filter(function(u){
+                return u.isActive
+            });
+        }
+    }
+});

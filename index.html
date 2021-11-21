@@ -31,6 +31,10 @@
         </form>
       </div>
     </div>
+    <div id="loop">
+      <!-- độ ưu tiên vòng for cao hơn if v-if="user.isActive" -->
+      <div class="user" v-for="user in userActive" >{{user.email}} </div>
+    </div>
     <footer>Footer</footer>
   </body>
   <script src="main.js"></script>
